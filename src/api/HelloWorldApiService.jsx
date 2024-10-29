@@ -8,7 +8,7 @@ import axios from 'axios'
 
 const apiClient = axios.create(
     {
-        baseURL: 'http://localhost:8090'
+        baseURL: 'https://localhost:8090/api/todos'
     }
 );
 
