@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8090/api/todos';
+const API_BASE_URL = 'http://localhost:8080/api/todos';
 
 class TodoService {
   async getTodos() {
@@ -43,4 +43,5 @@ class TodoService {
   }
 }
 
+//eslint-disable-next-line
 export default new TodoService();

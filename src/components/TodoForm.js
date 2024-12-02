@@ -33,9 +33,9 @@ const TodoForm = ({ addOrUpdateTodo, editTodo, clearEditTodo }) => {
       id: editTodo?.id || null,
       title,
       description,
-      completed,
       priority,
-      dueDate: dueDate ? new Date(dueDate).toISOString() : null // Convert to ISO format
+      dueDate: dueDate ? new Date(dueDate).toISOString() : null, // Convert to ISO format
+      completed
     };
     addOrUpdateTodo(todo);
     clearForm();
