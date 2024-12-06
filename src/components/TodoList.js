@@ -2,23 +2,23 @@ import React from 'react';
 
 const TodoList = ({ todos, onEditTodo, onDeleteTodo }) => {
   return (
-    <ul className="list-group mt-4">
+    <ul className="task-container">
       {todos.map((todo) => (
-        <li key={todo.id} className="list-group-item d-flex justify-content-between align-items-center">
-          <div>
-            <h5>{todo.title}</h5>
+        <li key={todo.id} className="task-card">
+          <div className='task-content'>
+            <h3>{todo.title}</h3>
             <p>{todo.description}</p>
             <span className="badge badge-pill badge-info">
               {todo.completed ? 'Completed' : 'Not Completed'}
             </span>
-            <p>Priority: {todo.priority}</p>
+            <p className='task-priority priority-medium'>Priority: {todo.priority}</p>
             <p>Due Date: {todo.dueDate ? new Date(todo.dueDate).toLocaleDateString() : 'N/A'}</p>
           </div>
-          <div>
-            <button onClick={() => onEditTodo(todo)} className="btn btn-warning btn-sm mr-2">
+          <div className='task-actions'>
+            <button onClick={() => onEditTodo(todo)} className="edit-btn">
               Edit
             </button>
-            <button onClick={() => onDeleteTodo(todo.id)} className="btn btn-danger btn-sm">
+            <button onClick={() => onDeleteTodo(todo.id)} className="delete-btn">
               Delete
             </button>
           </div>

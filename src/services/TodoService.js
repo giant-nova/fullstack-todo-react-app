@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:8080/api/todos';
+// const API_BASE_URL = 'ec2-3-94-140-74.compute-1.amazonaws.com/api/todos';
 
 class TodoService {
   async getTodos() {
